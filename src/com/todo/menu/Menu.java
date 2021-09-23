@@ -5,7 +5,7 @@ public class Menu {
     {
         System.out.println("[To do list 관리 명령어 모음] \n");
         System.out.println("1 add : 항목 추가");
-        System.out.println("2 Delete : 항목 삭제");
+        System.out.println("2 del : 항목 삭제");
         System.out.println("3 edit : 항목 수정");
         System.out.println("4 ls : 전체 목록");
         System.out.println("5 ls_name_asc : 제목순 정렬");
