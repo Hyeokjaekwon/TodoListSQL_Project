@@ -34,14 +34,13 @@ public class TodoList {
 		Collections.sort(list, new TodoSortByName());
 
 	}
-
-	public void listAll() {
-		System.out.println("\n"
-				+ "inside list_All method\n");
-		for (TodoItem myitem : list) {
-			System.out.println(myitem.getTitle() + myitem.getDesc());
-		}
-	}
+//
+//	public void listAll() {
+//		System.out.println("[목록]");
+//		for (TodoItem myitem : list) {
+//			System.out.println(myitem.toString());
+//		}
+//	}
 	
 	public void reverseList() {
 		Collections.reverse(list);
