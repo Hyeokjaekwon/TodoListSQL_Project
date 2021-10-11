@@ -89,7 +89,7 @@ public class TodoList {
 	}
 
 	public int deleteItem(int index) {
-		String sql = "SELECT * FROM list WHERE title = ?";
+		String sql = "delete FROM list WHERE id = ?";
 		PreparedStatement pstmt;
 		
 		int count = 0;
@@ -280,7 +280,8 @@ public class TodoList {
 		String sql = "update list set is_completed=1 where id=?;";
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, 1);
+			pstmt.setInt(1, key);
+
 			count = pstmt.executeUpdate();
 			pstmt.close();
 		} catch(SQLException e) {
@@ -294,7 +295,7 @@ public class TodoList {
 
 	public ArrayList<TodoItem> listComp(){
 		ArrayList<TodoItem> list = new ArrayList<TodoItem>();
-		String sql = "Select * from Lists where is_completed = ?";
+		String sql = "Select * from list where is_completed = ?";
 		PreparedStatement pstmt;
 		try {
 			pstmt = conn.prepareStatement(sql);

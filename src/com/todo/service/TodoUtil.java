@@ -18,9 +18,11 @@ public class TodoUtil {
 		String title, desc;
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("< 항목 추가 >" + "\n제목을 입력해 주세요 =)");
-
+		System.out.print("[항목 추가]" + "\n제목을 입력해 주세요 =)");
+		
 		title = sc.next();
+		sc.nextLine();
+		
 		if (list.isDuplicate(title)) {
 			System.out.println("제목이 중복됩니다!");
 			return;
@@ -29,7 +31,7 @@ public class TodoUtil {
 		System.out.print("카테고리를 입력하세요 =) ");
 		String category = sc.nextLine();
 
-		sc.nextLine();
+//		sc.nextLine();
 
 		System.out.print("내용을 입력하세요 =) ");
 		desc = sc.nextLine();
@@ -48,7 +50,7 @@ public class TodoUtil {
 
 	public static void deleteItem(TodoList l) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("\n" + "========== 항목 삭제 ==========\n" + "삭제할 항목의 번호 >>  ");
+		System.out.println("\n" + "[항목 삭제]\n" + "삭제할 항목의 번호 >  ");
 		int index = sc.nextInt();
 		if (l.deleteItem(index) > 0)
 			System.out.println("삭제되었습니다.");
@@ -57,7 +59,7 @@ public class TodoUtil {
 	public static void updateItem(TodoList l) {
 		String new_title, new_desc, new_category, new_due_date;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("\n" + "========== 항목 수정 ==========\n" + "수정할 항목의 번호 >> ");
+		System.out.println("\n" + "[항목 수정]\n" + "수정할 항목의 번호 > ");
 		int index = sc.nextInt();
 
 		System.out.print("새로운 제목을 입력해주세요 =) ");
