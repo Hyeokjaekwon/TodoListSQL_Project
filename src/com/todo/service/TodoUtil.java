@@ -146,6 +146,22 @@ public class TodoUtil {
 			System.out.println(item.toString());
 		}
 	}
+	
+	public static void complete(TodoList l,int key) {
+		if(l.comp(key) > 0)
+			System.out.println("일정을 완료하였습니다.");
+		
+	}
+	
+	public static void listAllCompleted(TodoList l) {
+		int i=0;
+		for(TodoItem item: l.listComp()) {
+			System.out.printf("[%d]",item.getId());
+			System.out.println(item.toString());
+			i++;
+		}
+		System.out.println("총 "+i+"개의 항목을 찾았습니다.");
+	}
 
 //	public static void listCate(TodoList l) {
 //		System.out.println("");

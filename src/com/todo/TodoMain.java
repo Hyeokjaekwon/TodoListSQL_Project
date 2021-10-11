@@ -14,7 +14,7 @@ public class TodoMain {
 		TodoList l = new TodoList();
 //		boolean isList = false;
 		boolean quit = false;
-		l.importData("todolist.txt");
+//		l.importData("todolist.txt");
 		Menu.displaymenu();
 		do {
 			Menu.prompt();
@@ -78,6 +78,18 @@ public class TodoMain {
 				
 			case "help":
 				Menu.displaymenu();
+				break;
+				
+			case "comp":
+				int input;
+				
+				input = sc.nextInt();
+				sc.nextLine();
+				TodoUtil.complete(l, input);
+				break;
+				
+			case "ls_comp":
+				TodoUtil.listAllCompleted(l);
 				break;
 
 			default:

@@ -15,7 +15,9 @@ public class Menu {
         System.out.println("9 ls_date_desc : 최신순 정렬");
         System.out.println("10 find : 키워드 검색");
         System.out.println("11 find_cate <키워드> : 카테고리 검색");
-        System.out.println("12 exit : 종료");
+        System.out.println("12 comp <번호>: 번호에 해당하는 항목을 완료처리");
+        System.out.println("13 ls_comp: 완료처리된 항목들을 모두 출력");
+        System.out.println("14 exit : 종료");
 
     }
     
