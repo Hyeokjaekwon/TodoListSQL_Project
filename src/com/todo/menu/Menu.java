@@ -17,7 +17,9 @@ public class Menu {
         System.out.println("11 find_cate <키워드> : 카테고리 검색");
         System.out.println("12 comp <번호>: 번호에 해당하는 항목을 완료처리");
         System.out.println("13 ls_comp: 완료처리된 항목들을 모두 출력");
-        System.out.println("14 exit : 종료");
+        System.out.println("14 ls_today : 오늘까지 해야하는 목록 출");
+        System.out.println("15 ls_location : 매달 내가 있는 장소 확인하기 정 [location yyyy/mm/dd식으로 입력해주세요 =)] ");
+        System.out.println("16 exit : 종료");
 
     }
     

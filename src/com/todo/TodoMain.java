@@ -92,6 +92,16 @@ public class TodoMain {
 				TodoUtil.listAllCompleted(l);
 				break;
 
+			case "ls_today":
+				TodoUtil.listToday(l);
+				break;
+				
+			case "ls_location":
+				String location = sc.nextLine().trim();
+				TodoUtil.location(l,location);
+				break;
+				
+				
 			default:
 				System.out.println("눈을 똑바로 뜨고 정확히 입력해주세요! (도움이 필요하면 -> help)\n");
 				break;
