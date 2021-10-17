@@ -410,7 +410,7 @@ public class TodoList {
 		ArrayList<TodoItem> list = new ArrayList<TodoItem>();
 		PreparedStatement pstmt;
 		try {
-			String sql = "SELECT * FROM list WHERE due_date like ? ORDER BY planTime";
+			String sql = "SELECT * FROM list WHERE due_date like ? ORDER BY due_time";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, "%"+location+"%");
 			ResultSet rs = pstmt.executeQuery();
@@ -421,8 +421,8 @@ public class TodoList {
 				String description = rs.getString("memo");
 				String category = rs.getString("category");
 				int is_completed = rs.getInt("is_completed");
-				String due_time = rs.getString("planTime");
-				String place = rs.getString("location");
+				String due_time = rs.getString("due_time");
+				String place = rs.getString("place");
 				String due_date = rs.getString("due_date");
 				String current_date = rs.getString("current_date");
 				TodoItem t = new TodoItem(category, title, description, due_date,is_completed,place,due_time);
